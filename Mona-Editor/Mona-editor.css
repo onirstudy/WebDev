@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Oswald:wght@200..700&display=swap");
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  color: #fff;
+  background-color: #12141e;
+  padding: 3% 6vw;
+  font-family: gabarito, system-ui;
+  --btn-bg-clr: #2a64f6;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  max-width: 12em;
+  margin: 0 auto 0.5em;
+}
+h2 {
+  margin: 0 0 0.1em;
+  font-size: calc(2em + 1.5vw);
+}
+h1,
+h2 {
+  letter-spacing: -0.04em;
+  font-size: calc(2.5em + 2vw);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+/* start nav section */
+body header {
+  margin-bottom: 8em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+body header a:first-child {
+  width: 87px;
+  height: 28px;
+}
+body header a:last-child {
+  width: 32px;
+  height: 32px;
+}
+/* End nav section */
+
+/* start main section */
+body main {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+button,
+[role="button"] {
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  background-color: #333;
+  border: 0;
+  border-radius: 0.5em;
+  padding: 0.7em 1.4em;
+  font-weight: 550;
+  display: inline-block;
+  font-size: 1.2em;
+  background-color: var(--btn-bg-clr);
+}
+[role="button"]:hover {
+  background-color: var(--btn-bg-clr);
+}
+.hero {
+  border-radius: 0.6em;
+  margin: 6rem 0 9rem;
+  box-shadow: 0 0.1em 0.2em #5586ff, 0 0 5em #0037c2;
+}
+
+main h2 + p {
+  color: #848d97;
+  margin: 0 0 4em;
+  font-size: calc(1.1em + 0.9vw);
+}
+
+.stack {
+  text-align: left;
+  margin-bottom: 3rem;
+  display: flex;
+  gap: 3rem;
+}
+.stack > * {
+  flex: 1;
+  background: linear-gradient(rgba(255, 255, 255, 0.067), transparent);
+  border-radius: 1em;
+  padding: 2.5em;
+  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.067);
+}
+/* both code blocks achieve the same outcome:  */
+/* the first code block is written using SCSS syntax, which allows nesting and referencing parent selectors using &, while the second code block uses standard CSS syntax without nesting. */
+/* 
+.stack {
+  & > * {
+    flex: 1;
+    background: linear-gradient(rgba(255, 255, 255, 0.067), transparent);
+    border-radius: 1em;
+    padding: 2.5em;
+    box-shadow: 0 1px 4px rgba(255, 255, 255, 0.067);
+  }
+} */
+
+@media (width <= 900px) {
+  .stack {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+h3 {
+  margin: 0 0 0.2em;
+  font-weight: 500;
+}
+h3 + p {
+  max-width: 24em;
+  margin: 0 0 1em;
+  color: #848d97;
+}
+
+/* start grid section */
+.grid {
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: calc(2em + 7vw);
+  max-width: 1000px;
+  margin: 7em auto;
+}
+.grid {
+  & img {
+    width: 3em;
+    margin-bottom: 1em;
+  }
+}
+/* The & symbol is used to reference the parent selector when nesting styles in CSS. It allows you to concatenate the parent selector with the child selector, resulting in more concise and readable code. */
+/* end grid section */
+/* End main section */
+
+/* Start footer section */
+footer {
+  display: flex;
+  gap: 3em;
+  border-top: 1px solid rgba(255, 255, 255, 0.067);
+  margin-top: 10em;
+  padding: 5em 0;
+}
+body > footer {
+  & > :first-child {
+    flex: 0.5;
+    margin: 0;
+    font-size: 1.7em;
+  }
+}
+body > footer {
+  & aside {
+    gap: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    flex: 1;
+  }
+}
+nav a {
+  padding: 0.5em 0;
+  display: block;
+  opacity: 0.6;
+  color: #ccc;
+  font-size: 90%;
+  font-weight: 500;
+}
+@media (max-width: 778px) {
+  footer {
+    flex-direction: column;
+  }
+}
+
+/* End footer section */
+.hero:hover{
+  box-shadow: 0 0.1em 0.2em #4b7aee, 0 0 5em #0d4ae3;
+}

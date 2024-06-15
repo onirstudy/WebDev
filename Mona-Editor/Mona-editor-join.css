@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Oswald:wght@200..700&display=swap");
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  color: #fff;
+  background-color: #12141e;
+  padding: 3% 6vw;
+  font-family: gabarito, system-ui;
+  --btn-bg-clr: #2a64f6;
+}
+/* start form main section */
+body main {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+body main form {
+  max-width: 350px;
+  margin: 3em auto;
+}
+form p {
+  color: #848d97;
+}
+form p img {
+  max-width: 100%;
+}
+form h2 {
+  margin-block: 2.7rem;
+  letter-spacing: -0.04em;
+  font-size: calc(2em + 1.5vw);
+  font-weight: 600;
+  line-height: 1.1;
+}
+form label {
+  text-align: left;
+  margin-bottom: 1.5em;
+  display: block;
+}
+label h3 {
+  font-size: 100%;
+  margin: 0 0 0.2em;
+  font-weight: 500;
+}
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: #fff;
+  background: #2c2e39;
+  border: 0;
+  border-radius: 0.4em;
+  width: 100%;
+  padding: 1em;
+}
+form label input::placeholder,
+textarea::placeholder {
+  color: #585b5f;
+}
+input:focus,
+textarea:focus {
+  background-color: #12141e;
+  outline: 2px solid #2a64f6;
+}
+form button {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  border: 0;
+  border-radius: 0.5em;
+  padding: 0.7em 1.4em;
+  font-weight: 500;
+  display: inline-block;
+  background-color: #2a64f6;
+  font-size: 1.2em;
+}
+form button:hover {
+  background-color: #1a58f4;
+}
+/* End form main section */
